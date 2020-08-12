@@ -5,7 +5,9 @@ const Postimagedetail=()=>
 {
     return(
         <div className="container-fluid">
+            
             <div className="row">
+                <div className="col-1"/>
                 <div className="col-8">
                 <Postsdetail/>
                 </div>

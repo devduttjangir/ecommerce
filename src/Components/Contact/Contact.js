@@ -2,6 +2,14 @@ import React from 'react';
 const Contact=()=>{
     return (<React.Fragment>
     <div className="container-fluid">
+        <div className="row pt-4 pb-4">
+        <div className="col-3"/>
+        <div className="col h1 text-center">
+        Get in touch
+
+        </div>
+        <div className="col-3"/>
+        </div>
         <div className="row">
             <div className="col-3" />    
             <div className="col">    
@@ -19,25 +27,25 @@ const Contact=()=>{
                     <div className="row pt-2">
                         <div className="col">
                             <form>
-                            <div class="form-group">
+                            <div className="form-group h6">
                             <label for="exampleInputEmail1">Name</label>
-                            <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp"></input>
+                            <input type="text" placeholder="Name" className="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp"></input>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group h6">
                             <label for="exampleInputEmail1">Company</label>
-                            <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp"></input>
+                            <input type="text" placeholder="Company" className="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp"></input>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group h6">
                             <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp"></input>
+                            <input type="email" placeholder="Email address" className="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp"></input>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group h6">
                             <label for="exampleFormControlTextarea1">Message</label>
-                            <textarea class="form-control form-control-sm" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <textarea  placeholder="Message" className="form-control form-control-sm" id="exampleFormControlTextarea1" rows="3"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">Send</button>
+                            <button type="submit" className="btn btn-success font-weight-bold rounded-0">Send</button>
                             </form>
                         </div>
                     </div>

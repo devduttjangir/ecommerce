@@ -4,9 +4,9 @@ const About = () => {
   return (
     <React.Fragment>
       <div className="container-fluid">
-        <div className="row pt-2">
+        <div className="row pt-4">
           <div className="col-3"></div>
-          <div className="col h2 text-center">Who are we?</div>
+          <div className="col h1 text-center">Who are we?</div>
           <div className="col-3"></div>
         </div>
         <div className="row pt-4">
@@ -59,7 +59,24 @@ const About = () => {
         </div>
         <div className="row pt-2">
           <div className="col-3"></div>
-          <div className="col">7</div>
+          <div className="col p-0">
+          <ul>
+          <li>Donec quam felis</li>
+          <li>Consectetuer adipiscing</li>
+          </ul>
+          </div>
+          <div className="col">
+          <ul>
+          <li>Donec quam felis</li>
+          <li>Consectetuer adipiscing</li>
+          </ul>
+          </div>
+          <div className="col">
+          <ul>
+          <li>Donec quam felis</li>
+          <li>Consectetuer adipiscing</li>
+          </ul>
+          </div>
           <div className="col-3"></div>
         </div>
         <div className="row pt-2 ">

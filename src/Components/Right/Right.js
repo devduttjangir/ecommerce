@@ -1,12 +1,11 @@
 import React from 'react';
 import Popular from '../Popular';
-
+import Tags from '../Tags';
 const Right=()=>{
     const stories=[
-        {title:"The blind man",postdate:"10 months ago in Lifestyle"},
-        {title:"The blind man",postdate:"10 months ago in Lifestyle"},
-        {title:"The blind man",postdate:"10 months ago in Lifestyle"},
-        {title:"The blind man",postdate:"10 months ago in Lifestyle"},
+        {title:"The blind man",imageurl:"https://milo.bootlab.io/img/articles/2.jpg",postdate:"10 months ago in Lifestyle"},
+        {title:"Crying on the news",imageurl:"https://milo.bootlab.io/img/articles/3.jpg",postdate:"1 year ago in Work"},
+        
         ]
 const renderstories=()=>
 {
@@ -14,7 +13,7 @@ const renderstories=()=>
             return(
                 <div className="row">
                     <div className="col">
-                    <Popular title={popular.title} postdate={popular.postdate}/>
+                    <Popular title={popular.title}  imageurl={popular.imageurl} postdate={popular.postdate}/>
                     </div>
                 </div>
             )
@@ -24,43 +23,47 @@ const renderstories=()=>
 
      
     return (
-        <div className="container-fluid">
-            <div className="row">
-                <div className="col">
+        <div className="container">
+            <div className="row pt-4">
+                <div className="col h4">
                 About
                 </div>
             </div>
-            <div className="row pt-2">
+            <div className="row pt-2 ">
                 <div className="col">
                 Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum
                 </div>
             </div>
-            <div className="row pt-4">
+            <div className="row pt-4 border-bottom ">
                 <div className="col">
-        
                 </div>
             </div>
-            <div className="row pt-2 border-top">
-                <div className="col pt-2">
+            <div className="row pt-4 ">
+                <div className="col pt-2 h4">
                 Tags
                 </div>
             </div>
-            <div className="row pt-4 pb-4">
+            <div className="row pt-2 pb-4">
                 <div className="col">
-                <button type="button" class="btn btn-secondary btn-sm">Journey</button><button type="button" class="btn btn-secondary btn-sm">Work</button>
-                <button type="button" class="btn btn-secondary btn-sm">Lifestype</button>
-                <button type="button" class="btn btn-secondary btn-sm">Photography</button><button type="button" class="btn btn-secondary btn-sm">Food and Drink</button>
+                <Tags title="Journey"/>
+                <Tags title="Work"/>
+                <Tags title="Lifestyle"/>
+                <Tags title="Photography"/>
+                <Tags title="Food and Drink"/>
 
+                
                 </div>
             </div>
             <div className="row pt-4  border-top">
-                <div className="col">
-                Popular stories
+                <div className="col h4">
+                Popular Stories
                 </div>
             </div>
-            <div className="row pt-4  border-top">
+            <div className="row pt-2">
+               
                 <div className="col">
-                {renderstories()}
+                    {renderstories()}
+                    
                 </div>
             </div>
         </div>
