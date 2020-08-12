@@ -14,7 +14,9 @@ const Post=props=>{
             </div>
             <div className="row">
                 <div className="col">
-                <img src="https://milo.bootlab.io/img/articles/8.jpg"/>
+
+                {/* <img src="https://milo.bootlab.io/img/articles/8.jpg"/> */}
+                <img src={props.imageurl}/>
                 </div>
             </div>
             <div className="row">

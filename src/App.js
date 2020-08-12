@@ -5,6 +5,7 @@ import Header from './Components/Header';
 import Footer from './Components/Footer'
 import Contact from './Components/Contact'
 import Post from './Components/Post'
+import Postimagedetail from './Components/Postimagedetail'
 import Home from './Components/Home'
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <About />
       <Contact/>
       <Post/>
+      <Postimagedetail/>
       <Footer/>
       
     </div>
