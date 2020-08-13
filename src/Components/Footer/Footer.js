@@ -1,4 +1,6 @@
 import React from "react";
+import FooterPosts from "./FooterPosts";
+
 const Footer = () => {
   return (
     <React.Fragment>
@@ -6,52 +8,70 @@ const Footer = () => {
         <div className="container">
           <div className="row pt-4">
             <div className="col h4 text-center ">
-            Subscribe to our newsletter
+              Subscribe to our newsletter
             </div>
           </div>
           <div className="row">
             <div className="col text-center ">
-            Join our monthly newsletter and never miss out on new stories and promotions.
+              Join our monthly newsletter and never miss out on new stories and
+              promotions.
             </div>
           </div>
           <div className="row pt-4">
-            <div className="col-3"/>
+            <div className="col-3" />
             <div className="col">
               <div className="input-group mb-3">
-                  <input type="text" className="form-control" placeholder="Email address" />
-                  <div className="input-group-append">
-                    <button className="btn btn-dark font-weight-bold" type="button" font-weight-bold>Subscribe</button>
-                  </div>
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Email address"
+                />
+                <div className="input-group-append">
+                  <button
+                    className="btn btn-dark font-weight-bold"
+                    type="button"
+                    font-weight-bold
+                  >
+                    Subscribe
+                  </button>
+                </div>
               </div>
-
             </div>
-            <div className="col-3"/>
-            </div>
-          
-
+            <div className="col-3" />
+          </div>
         </div>
       </div>
-      <div className="jumbotron jumbotron-fluid ">
-        <div className="container">
-          <div className="row">
-            <div className="col">
-            <img src="https://milo.bootlab.io/post-image.html#"/>
+      <div className="jumbotron jumbotron-fluid">
+        <div className="container-fluid">
+          <div className="row p-0">
+            <div className="col p-0">
+              <FooterPosts />
             </div>
-              <div className="col">
-            <img src=""/>
+          </div>
+        </div>
+        <div className="container-fluid bg-dark">
+          <div className="row p-0">
+            <div className="col-3" />
+            <div className="col bg-dark">
+              <div className="d-flex justify-content-center py-3">
+                <div className="float-left px-2 border-right">
+                  <a href="#">PRIVACY POLICY</a>
+                </div>
+                <div className="float-left px-2 border-right">
+                  <a href="#">TERMS</a>
+                </div>
+                <div className="float-left px-2 border-right">
+                  <a href="#">FEEDBACK</a>
+                </div>
+                <div className="float-left px-2 border-right">
+                  <a href="#">ADVERTISE</a>
+                </div>
+                <div className="float-left px-2">
+                  <a href="#">CONTACT</a>
+                </div>
+              </div>
             </div>
-              <div className="col">
-            <img src=""/>
-            </div>
-              <div className="col">
-            <img src=""/>
-            </div>
-              <div className="col">
-            <img src=""/>
-            </div>
-              <div className="col">
-            <img src=""/>
-            </div>
+            <div className="col-3" />
           </div>
         </div>
       </div>
