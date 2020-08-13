@@ -135,10 +135,42 @@ const Postsdetail = () => {
       <div className="row  pt-4 border-top">
         <div className="col">{rendercomments()}</div>
       </div>
-      <div className="row">
-        <div className="col">form</div>
+      <div className="row pt-2">
+        <div className="col h5 ">
+        Write a response
+        </div>
       </div>
-    </div>
+      <div className="row">
+         <div className="col form-group">
+         
+         <input type="text" placeholder="Your name" class="form-control"/>
+         </div>
+         <div className="col form-group">
+         <form>
+         <input type="text" placeholder="Your email" class="form-control"/> </form>
+         </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <div className="form-group">
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Write a response..</textarea>
+          </div>
+
+        </div>
+      </div>
+      <div className="row">
+        <div className="col ">
+        
+        <button type="button" class="btn btn-success font-weight-bold">PUBLISH</button>
+          </div>
+
+        </div>
+      </div>
+
+                
+            
+        
+     
   );
 };
 export default Postsdetail;
