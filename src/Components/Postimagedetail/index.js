@@ -1,2 +1,2 @@
-import Postimagedetail from './Postimagedetail';
+import Postimagedetail from "./Postimagedetail";
 export default Postimagedetail;

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
 const Root = () => {
-    return <div>Root Components</div>
-}
+  return <div>Root Components</div>;
+};
 export default Root;

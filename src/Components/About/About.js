@@ -60,22 +60,22 @@ const About = () => {
         <div className="row pt-2">
           <div className="col-3"></div>
           <div className="col p-0">
-          <ul>
-          <li>Donec quam felis</li>
-          <li>Consectetuer adipiscing</li>
-          </ul>
+            <ul>
+              <li>Donec quam felis</li>
+              <li>Consectetuer adipiscing</li>
+            </ul>
           </div>
           <div className="col">
-          <ul>
-          <li>Donec quam felis</li>
-          <li>Consectetuer adipiscing</li>
-          </ul>
+            <ul>
+              <li>Donec quam felis</li>
+              <li>Consectetuer adipiscing</li>
+            </ul>
           </div>
           <div className="col">
-          <ul>
-          <li>Donec quam felis</li>
-          <li>Consectetuer adipiscing</li>
-          </ul>
+            <ul>
+              <li>Donec quam felis</li>
+              <li>Consectetuer adipiscing</li>
+            </ul>
           </div>
           <div className="col-3"></div>
         </div>

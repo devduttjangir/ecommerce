@@ -1,2 +1,2 @@
-import Postsdetail from './Postsdetail';
+import Postsdetail from "./Postsdetail";
 export default Postsdetail;
