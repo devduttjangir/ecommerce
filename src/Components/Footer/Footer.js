@@ -54,27 +54,48 @@ const Footer = () => {
             <div className="col-3" />
             <div className="col bg-dark">
               <div className="d-flex justify-content-center py-3">
-                <div className="float-left px-2 border-right">
-                  <a href="#">PRIVACY POLICY</a>
+                <div className="float-left px-3  border-right  border-secondary">
+                  <a href="#"><font color="grey">PRIVACY POLICY</font></a>
                 </div>
-                <div className="float-left px-2 border-right">
-                  <a href="#">TERMS</a>
+                <div className="float-left px-3 border-right border-secondary">
+                  <a href="#"><font color="grey">TERMS</font></a>
                 </div>
-                <div className="float-left px-2 border-right">
-                  <a href="#">FEEDBACK</a>
+                <div className="float-left px-3  border-right border-secondary">
+                  <a href="#"><font color="grey">FEEDBACK </font></a>
                 </div>
-                <div className="float-left px-2 border-right">
-                  <a href="#">ADVERTISE</a>
+                <div className="float-left px-3  border-right border-secondary ">
+                  <a href="#"><font color="grey">ADVERTISE</font></a>
                 </div>
-                <div className="float-left px-2">
-                  <a href="#">CONTACT</a>
+                <div className="float-left px-3 ">
+                  <a href="#"><font color="grey">CONTACT</font></a>
                 </div>
               </div>
             </div>
             <div className="col-3" />
           </div>
         </div>
+      <div className="container-fluid bg-dark">
+        <div className="row pt-2">
+          <div className="col-3"/>
+          <div className="col border-top border-light">
+          </div>
+          <div className="col-3"/>
+        </div>
       </div>
+      <div className="container-fluid bg-dark">
+        <div className="row pb=0 text-center pt-2">
+          <div className="col text-muted">
+          <small>© MILO 2019</small>
+          </div>
+        </div>
+        <div className="row  pb-4 text-center">
+          <div className="col text-muted">
+          <small>ALL RIGHTS RESERVED</small>
+          </div>
+        </div>
+
+      </div>
+    </div>
     </React.Fragment>
   );
 };
