@@ -60,17 +60,17 @@ const Footer = () => {
                   </a>
                 </div>
                 <div className="float-left px-3 border-right border-secondary">
-                  <a href="#">
+                  <a href="/home">
                     <font color="grey">TERMS</font>
                   </a>
                 </div>
                 <div className="float-left px-3  border-right border-secondary">
-                  <a href="#">
-                    <font color="grey">FEEDBACK </font>
+                  <a href="/home">
+                    <font color="grey">FEEDBACK</font>
                   </a>
                 </div>
                 <div className="float-left px-3  border-right border-secondary ">
-                  <a href="#">
+                  <a href="/home">
                     <font color="grey">ADVERTISE</font>
                   </a>
                 </div>

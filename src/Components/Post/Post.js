@@ -12,13 +12,15 @@ const Post = (props) => {
       </div>
       <div className="row pt-4 pb-2">
         <div className="col">
-           <img src={props.imageurl} width="100%" />
+           <a href={props.url}><img src={props.imageurl} width="100%" /></a>
         </div>
       </div>
-      <div className="row pt-2 pb-4 border-bottom">
+      <div className="row pt-4 pb-4 border-bottom ">
         <div className="col">{props.description}</div>
       </div>
+       
     </div>
+
   );
 };
 export default Post;

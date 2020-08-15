@@ -26,10 +26,12 @@ const Home = () => {
         <div className="row">
           <div className="col">
             <Post
+              
               postdate={article.publishedAt}
               title={article.title}
               imageurl={article.urlToImage}
               description={article.description}
+              url={article.url}
             />
           </div>
         </div>
@@ -50,7 +52,7 @@ const Home = () => {
           {renderPost()}
         </div>
         <div className="col">
-          <Right categorySelected={categorySelected} selectedCategory={category} popularNews={news.splice(0,2)}/>
+          <Right categorySelected={categorySelected} selectedCategory={category} popularNews={news.splice(0,3)}/>
         </div>
       </div>
     </div>
