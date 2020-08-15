@@ -1,4 +1,5 @@
 import React from "react";
+import moment from "moment";
 const Popular = (props) => {
   return (
     <div className="container-fluid">
@@ -11,7 +12,7 @@ const Popular = (props) => {
         </div>
       </div>
       <div className="row pb-4">
-        <div className="col">{props.postdate}</div>
+        <div className="col">{ moment(props.postdate).format('MMMM Do YYYY, H:mm ')}</div>
       </div>
     </div>
   );

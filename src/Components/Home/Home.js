@@ -1,63 +1,56 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import Post from "../Post";
 import Right from "../Right";
+import API from "../../HttpApi/API";
+
 const Home = () => {
-  const posts = [
-    {
-      postdate: "9 months ago in Journey",
-      title: "How can we sing about love?",
-      imageurl: "https://milo.bootlab.io/img/articles/8.jpg",
-      description:
-        "Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.",
-    },
-    {
-      postdate: "10 months ago in Lifestyle",
-      title: "Oh, I guess they have the blues",
-      imageurl: "https://milo.bootlab.io/img/articles/22.jpg",
-      description:
-        "Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.",
-    },
-    {
-      postdate: "1 year ago in Work",
-      title: "How can we, how can we sing about ourselves?",
-      imageurl: "https://milo.bootlab.io/img/articles/19.jpg",
-      description:
-        "Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.",
-    },
-    {
-      postdate: "9 months ago in Lifestyle",
-      title: "The king is made of paper",
-      imageurl: "https://milo.bootlab.io/img/articles/3.jpg",
-      description:
-        "Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.",
-    },
-  ];
-  const renderpost = () => {
-    return posts.map((post) => {
+  const [category,setCategory]=useState("Technology");
+  // save news to state
+  const [news, setNews] = useState([]);
+
+  const fetchTrendingNews = async () => {
+    const response = await API.get(
+      "/top-headlines?country=in&apiKey=c1f4a901003948009f7e742d1de9a2f9&category="+category
+    );
+    setNews(response.data.articles);
+  };
+
+  useEffect(() => {
+    fetchTrendingNews();
+  }, [category]);
+
+  const renderPost = () => {
+    return news.map((article) => {
       return (
         <div className="row">
           <div className="col">
             <Post
-              postdate={post.postdate}
-              title={post.title}
-              imageurl={post.imageurl}
-              description={post.description}
+              postdate={article.publishedAt}
+              title={article.title}
+              imageurl={article.urlToImage}
+              description={article.description}
             />
           </div>
         </div>
       );
     });
   };
+
+  const categorySelected = (category) => {
+    setCategory(category);
+  };
+
   return (
     <div className="container-fluid">
       <div className="row pt-4">
         <div className="col-1"></div>
         <div className="col-8">
           {/* <div className="container"> */}
-          {renderpost()}
+          {renderPost()}
         </div>
         <div className="col">
-          <Right />
+          <Right categorySelected={categorySelected} selectedCategory={category} popularNews={news.splice(0,2)}/>
         </div>
       </div>
     </div>

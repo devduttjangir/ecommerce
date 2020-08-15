@@ -75,7 +75,7 @@ const Footer = () => {
                   </a>
                 </div>
                 <div className="float-left px-3 ">
-                  <a href="#">
+                  <a href="/contact">
                     <font color="grey">CONTACT</font>
                   </a>
                 </div>

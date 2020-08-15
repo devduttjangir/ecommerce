@@ -1,28 +1,17 @@
 import React from "react";
 import Popular from "../Popular";
 import Tags from "../Tags";
-const Right = () => {
-  const stories = [
-    {
-      title: "The blind man",
-      imageurl: "https://milo.bootlab.io/img/articles/2.jpg",
-      postdate: "10 months ago in Lifestyle",
-    },
-    {
-      title: "Crying on the news",
-      imageurl: "https://milo.bootlab.io/img/articles/3.jpg",
-      postdate: "1 year ago in Work",
-    },
-  ];
+const Right = (props) => {
+  
   const renderstories = () => {
-    return stories.map((popular) => {
+    return props.popularNews.map((popular) => {
       return (
         <div className="row">
           <div className="col">
             <Popular
               title={popular.title}
-              imageurl={popular.imageurl}
-              postdate={popular.postdate}
+              imageurl={popular.urlToImage}
+              postdate={popular.publishedAt}
             />
           </div>
         </div>
@@ -45,15 +34,19 @@ const Right = () => {
         <div className="col"></div>
       </div>
       <div className="row pt-4 ">
-        <div className="col pt-2 h4">Tags</div>
+
+        <div className="col pt-2 h4">Category</div>
       </div>
       <div className="row pt-2 pb-4">
         <div className="col">
-          <Tags title="Journey" />
-          <Tags title="Work" />
-          <Tags title="Lifestyle" />
-          <Tags title="Photography" />
-          <Tags title="Food and Drink" />
+          <Tags title="Business" tagSelected={props.categorySelected} isSelected={"Business"===props.selectedCategory} />
+          <Tags title="General" tagSelected={props.categorySelected} isSelected={"General"===props.selectedCategory}/>
+          <Tags title="Health" tagSelected={props.categorySelected} isSelected={"Health"===props.selectedCategory}/>
+          <Tags title="Science" tagSelected={props.categorySelected} isSelected={"Science"===props.selectedCategory}/>
+          <Tags title="Sports" tagSelected={props.categorySelected} isSelected={"Sports"===props.selectedCategory}/>
+          <Tags title="Entertainment" tagSelected={props.categorySelected} isSelected={"Entertainment"===props.selectedCategory}/>
+          <Tags title="Technology"  tagSelected={props.categorySelected} isSelected={"Technology"===props.selectedCategory}/>
+
         </div>
       </div>
       <div className="row pt-4  border-top">
