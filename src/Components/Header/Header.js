@@ -2,7 +2,7 @@ import React from "react";
 import Routes from "../../Utility/Routes";
 import { Link } from "react-router-dom";
 const Header = () => {
-  return (
+  return (<React.Fragment>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">
         Miro
@@ -40,9 +40,20 @@ const Header = () => {
               <Link to={Routes.contact.path}>{Routes.contact.title}</Link>
             </a>
           </li>
-        </ul>
+          </ul>
+          <ul class="navbar-nav">
+      <li class="nav-item float-right">
+        <a class="nav-link float-right" href="#">
+         <Link to={Routes.login.path}>{Routes.login.title}</Link></a>
+      </li>
+      <li class="nav-item float-right">
+        <a class="nav-link float-right" href="#">Messages</a>
+      </li>
+    </ul>
+        
       </div>
     </nav>
+    </React.Fragment>
   );
 };
 export default Header;

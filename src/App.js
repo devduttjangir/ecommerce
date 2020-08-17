@@ -10,6 +10,7 @@ import Routes from "./Utility/Routes";
 import NotFound from "./Components/NotFound/NotFound";
 import { Provider } from "react-redux";
 import store from "./Redux/Store";
+import Login from "./Components/Login";
 function App() {
   return (
     <Provider store={store}>
@@ -26,6 +27,10 @@ function App() {
             <Route path={Routes.contact.path}>
               <Contact />
             </Route>
+            <Route path={Routes.login.path}>
+              <Login />
+            </Route>
+
             <Route exact path={Routes.home.path}>
               <Home />
             </Route>
