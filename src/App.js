@@ -15,6 +15,7 @@ function App() {
   return (
     <Provider store={store}>
       <div>
+        <Login />
         <Router>
           <Header />
           <Switch>
@@ -27,10 +28,6 @@ function App() {
             <Route path={Routes.contact.path}>
               <Contact />
             </Route>
-            <Route path={Routes.login.path}>
-              <Login />
-            </Route>
-
             <Route exact path={Routes.home.path}>
               <Home />
             </Route>
