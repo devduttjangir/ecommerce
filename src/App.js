@@ -11,11 +11,13 @@ import NotFound from "./Components/NotFound/NotFound";
 import { Provider } from "react-redux";
 import store from "./Redux/Store";
 import Login from "./Components/Login";
+import Messages from "./Components/Messages";
 function App() {
   return (
     <Provider store={store}>
       <div>
         <Login />
+        <Messages/>
         <Router>
           <Header />
           <Switch>

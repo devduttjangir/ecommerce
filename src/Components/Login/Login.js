@@ -29,10 +29,6 @@ const Login = (props) => {
         <button type="submit" class="btn btn-primary">
           Submit
         </button>
-        <div class="list-group">
-          <div class="list-group-item">Cras justo odio</div>
-          <div class="list-group-item">Dapibus ac facilisis in</div>
-        </div>
       </form>
     );
   };

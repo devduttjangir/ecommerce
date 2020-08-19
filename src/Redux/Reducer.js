@@ -1,4 +1,4 @@
-import { TAG_SELECTED, SHOW_LOGIN_SCREEN } from "./ActionType";
+import { TAG_SELECTED, SHOW_LOGIN_SCREEN,SHOW_MESSAGES_SCREEN } from "./ActionType";
 const initialState = {
   selectedCategory: "Entertainment",
   showLoginModal: false,
@@ -11,6 +11,9 @@ const reducer = (state = initialState, action) => {
     }
     case SHOW_LOGIN_SCREEN: {
       return { ...state, showLoginModal: action.payload };
+    }
+    case SHOW_MESSAGES_SCREEN:{
+      return {...state,showMessagesModal:action.payload};
     }
     default:
       return state;

@@ -3,6 +3,7 @@ import Routes from "../../Utility/Routes";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { showLoginScreen } from "../../Redux/Action";
+import {showMessagesScreen} from "../../Redux/Action";
 const Header = () => {
   const dispatch = useDispatch();
   return (
@@ -56,8 +57,8 @@ const Header = () => {
               </a>
             </li>
             <li class="nav-item float-right">
-              <a class="nav-link float-right" href="#">
-                Messages
+              <a class="nav-link" href="#" onClick={() => dispatch(showMessagesScreen(true))} >
+              {Routes.messages.title}
               </a>
             </li>
           </ul>
