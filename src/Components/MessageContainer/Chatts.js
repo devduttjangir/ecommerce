@@ -1,9 +1,13 @@
 import React from "react";
+import chatHeader from "./chatHeader";
 
-const Chats = (props) => {
+const Chatts = (props) => {
   const chatComponent = (chatDetail) => {
-    return (
+    return (<React.Fragment>
+        <div><chatHeader/></div>
+
       <div className="container bg-secondary my-2">
+       
         <div className="row">
           <div className="col">
             <div className="bg-light">
@@ -27,6 +31,7 @@ const Chats = (props) => {
           </div>
         </div>
       </div>
+      </React.Fragment>
     );
   };
 
@@ -37,4 +42,4 @@ const Chats = (props) => {
   };
   return <div>{renderChats()}</div>;
 };
-export default Chats;
+export default Chatts;
