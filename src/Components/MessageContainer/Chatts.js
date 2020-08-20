@@ -3,20 +3,24 @@ import React from "react";
 const Chats = (props) => {
   const chatComponent = (chatDetail) => {
     return (
-      <div className="container">
+      <div className="container bg-secondary my-2">
         <div className="row">
           <div className="col">
-            <div className="jumbotron jumbotron-fluid">
+            <div className="bg-light">
               <div className="container">
                 <div className="row">
-                  <div className="col">
-                    <img src={chatDetail.imageUrl} height="50%" />
+                  <div className="col py-2">
+                    <div
+                      className={`d-flex ${
+                        chatDetail.isFromMe ? "flex-row-reverse" : ""
+                      }`}
+                    >
+                      <div className="px-1">
+                        <img src={chatDetail.imageurl} height="50px" alt="" />
+                      </div>
+                      <div className="px-1">{chatDetail.content}</div>
+                    </div>
                   </div>
-                  <div className="col">{chatDetail.userName}</div>
-                  <div className="col">{chatDetail.postdate}</div>
-                </div>
-                <div className="row">
-                  <div className="col">{chatDetail.content}</div>
                 </div>
               </div>
             </div>
