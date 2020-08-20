@@ -26,7 +26,7 @@ const ChatContacts = (props) => {
     });
   };
   return (
-    <ul class="list-group list-group-flush">
+    <ul class="list-group list-group-flush overflow-auto">
       {rendercontacts()}
       {rendercontacts()}
       {rendercontacts()}
