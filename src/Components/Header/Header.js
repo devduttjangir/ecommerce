@@ -57,8 +57,8 @@ const Header = () => {
               </a>
             </li>
             <li class="nav-item float-right">
-              <a class="nav-link" href="#" onClick={() => dispatch(showMessagesScreen(true))} >
-              {Routes.messages.title}
+              <a class="nav-link" href="#"  >
+              <Link to={Routes.messages.path}>{Routes.messages.title}</Link>
               </a>
             </li>
           </ul>

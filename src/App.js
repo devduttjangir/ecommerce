@@ -12,6 +12,7 @@ import { Provider } from "react-redux";
 import store from "./Redux/Store";
 import Login from "./Components/Login";
 import Messages from "./Components/Messages";
+import MessageContainer from "./Components/MessageContainer";
 function App() {
   return (
     <Provider store={store}>
@@ -29,6 +30,9 @@ function App() {
             </Route>
             <Route path={Routes.contact.path}>
               <Contact />
+            </Route>
+            <Route path={Routes.messages.path}>
+              <MessageContainer />
             </Route>
             <Route exact path={Routes.home.path}>
               <Home />
