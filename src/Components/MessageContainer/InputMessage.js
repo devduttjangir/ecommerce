@@ -1,14 +1,24 @@
 import React, { useState } from "react";
+import {useDispatch} from "react-redux";
+import {newMessageAdded} from "../../Redux/Action"
 
 const InputMessage = (props) => {
   const [message, setMessage] = useState("");
+  const dispatch = useDispatch();
 
   const handleInputChange = (event) => {
     setMessage(event.target.value);
   };
 
   const sendMessagePressed = () => {
-    props.handleMessageSend(message);
+    dispatch(newMessageAdded(
+    {
+      userName: "Lucy",
+      imageurl: "https://milo.bootlab.io/img/avatars/3.png",
+      postdate: "8 months ago",
+      content: message,
+      isFromMe: true,
+    }))
     setMessage("");
   };
 

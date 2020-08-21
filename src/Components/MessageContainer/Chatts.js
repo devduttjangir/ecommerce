@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import {useSelector} from "react-redux";
 import ChatHeader from "./ChatHeader";
 import InputMessage from "./InputMessage";
 const Chatts = (props) => {
-  const [messages, setMessages] = useState(props.chatDetails);
+    
+    const messages = useSelector(state => state.messages)  
   const chatComponent = (chatDetail) => {
     return (
       <React.Fragment>
@@ -45,17 +47,7 @@ const Chatts = (props) => {
     });
   };
 
-  const handleMessageSend = (message) => {
-    let messageData = {
-      userName: "Lucy",
-      imageurl: "https://milo.bootlab.io/img/avatars/3.png",
-      postdate: "8 months ago",
-      content: message,
-      isFromMe: true,
-    };
-    setMessages([...messages, messageData]);
-  };
-
+ 
   return (
     <div className="d-flex flex-column" style={{ height: "670px" }}>
       <div className="bg-info py-2">
@@ -63,7 +55,7 @@ const Chatts = (props) => {
       </div>
       <div className="overflow-auto">{renderChats()}</div>
       <div className="mt-auto">
-        <InputMessage handleMessageSend={handleMessageSend} />
+        <InputMessage  />
       </div>
     </div>
   );
