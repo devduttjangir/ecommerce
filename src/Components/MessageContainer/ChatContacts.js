@@ -7,7 +7,7 @@ const ChatContacts = (props) => {
           <div className="container">
             <div className="row">
               <div className="col-2">
-                <img src={contact.imageurl} height="50px" />
+                <img src={contact.imageurl} className="rounded-circle" height="50px" />
               </div>
               <div className="col">
                 <div className="container">

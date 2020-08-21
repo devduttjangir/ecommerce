@@ -18,7 +18,7 @@ const Chatts = (props) => {
                         }`}
                       >
                         <div className="px-1">
-                          <img src={chatDetail.imageurl} height="50px" alt="" />
+                          <img src={chatDetail.imageurl} className="rounded-circle" height="50px" alt="" />
                         </div>
                         <div className="px-1">{chatDetail.content}</div>
                       </div>
