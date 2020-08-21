@@ -1,18 +1,18 @@
 import React from "react";
-import {newContactAdded,showContactScreen} from "../../Redux/Action";
-import {useSelector} from "react-redux";
-import {useDispatch} from "react-redux";
+import { newContactAdded, showContactScreen } from "../../Redux/Action";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import NewContact from "./NewContact";
 const ChatContacts = () => {
-    const dispatch = useDispatch()
-    const contacts = useSelector(state => state.contacts)
- const handleNewContact=()=>{
+  const dispatch = useDispatch();
+  const contacts = useSelector((state) => state.contacts);
+  const handleNewContact = () => {
     //  dispatch(newContactAdded({
     //   title: "Lucy",
     //   imageurl: "https://milo.bootlab.io/img/avatars/3.png"
     //  }))
-   dispatch(showContactScreen(true));
- }
+    dispatch(showContactScreen(true));
+  };
   const rendercontacts = () => {
     return contacts.map((contact) => {
       return (
@@ -22,8 +22,9 @@ const ChatContacts = () => {
               <div className="col-2">
                 <img
                   src={contact.imageurl}
-                  className="rounded-circle"
+                  className="rounded-circle border border-info"
                   height="50px"
+                  width="50px"
                 />
               </div>
               <div className="col">
@@ -43,18 +44,23 @@ const ChatContacts = () => {
     });
   };
   return (
-    <div className="container"><NewContact/>
+    <div className="container">
+      <NewContact />
       <div className="row bg-info">
         <div className="col d-flex py-3 mb-2 justify-content-between">
           <div>Contacts</div>
-          <div className="border border-light px-1" onClick={()=>handleNewContact()}>+ </div>
+          <div
+            className="border border-light px-2"
+            onClick={() => handleNewContact()}
+          >
+            +
+          </div>
         </div>
       </div>
       <div className="row overflow-auto" style={{ height: "600px" }}>
         <div className="col">
           <ul class="list-group list-group-flush overflow-auto">
             {rendercontacts()}
-           
           </ul>
         </div>
       </div>
@@ -62,4 +68,3 @@ const ChatContacts = () => {
   );
 };
 export default ChatContacts;
-

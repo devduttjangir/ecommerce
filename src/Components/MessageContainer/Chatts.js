@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import {useSelector} from "react-redux";
+import { useSelector } from "react-redux";
 import ChatHeader from "./ChatHeader";
 import InputMessage from "./InputMessage";
 const Chatts = (props) => {
-    
-    const messages = useSelector(state => state.messages)  
+  const messages = useSelector((state) => state.messages);
   const chatComponent = (chatDetail) => {
     return (
       <React.Fragment>
@@ -47,7 +46,6 @@ const Chatts = (props) => {
     });
   };
 
- 
   return (
     <div className="d-flex flex-column" style={{ height: "670px" }}>
       <div className="bg-info py-2">
@@ -55,7 +53,7 @@ const Chatts = (props) => {
       </div>
       <div className="overflow-auto">{renderChats()}</div>
       <div className="mt-auto">
-        <InputMessage  />
+        <InputMessage />
       </div>
     </div>
   );
