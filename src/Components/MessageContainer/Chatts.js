@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import ChatHeader from "./ChatHeader";
 import InputMessage from "./InputMessage";
 const Chatts = (props) => {
+  const [messages, setMessages] = useState(props.chatDetails);
   const chatComponent = (chatDetail) => {
     return (
       <React.Fragment>
@@ -18,7 +19,12 @@ const Chatts = (props) => {
                         }`}
                       >
                         <div className="px-1">
-                          <img src={chatDetail.imageurl} className="rounded-circle" height="50px" alt="" />
+                          <img
+                            src={chatDetail.imageurl}
+                            className="rounded-circle"
+                            height="50px"
+                            alt=""
+                          />
                         </div>
                         <div className="px-1">{chatDetail.content}</div>
                       </div>
@@ -34,18 +40,30 @@ const Chatts = (props) => {
   };
 
   const renderChats = () => {
-    return props.chatDetails.map((chatDetail) => {
+    return messages.map((chatDetail) => {
       return chatComponent(chatDetail);
     });
   };
+
+  const handleMessageSend = (message) => {
+    let messageData = {
+      userName: "Lucy",
+      imageurl: "https://milo.bootlab.io/img/avatars/3.png",
+      postdate: "8 months ago",
+      content: message,
+      isFromMe: true,
+    };
+    setMessages([...messages, messageData]);
+  };
+
   return (
     <div className="d-flex flex-column" style={{ height: "600px" }}>
       <div className="bg-info py-2">
         <ChatHeader />
       </div>
-      <div>{renderChats()}</div>
+      <div className="overflow-auto">{renderChats()}</div>
       <div className="mt-auto">
-        <InputMessage />
+        <InputMessage handleMessageSend={handleMessageSend} />
       </div>
     </div>
   );
