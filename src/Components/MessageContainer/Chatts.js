@@ -57,7 +57,7 @@ const Chatts = (props) => {
   };
 
   return (
-    <div className="d-flex flex-column" style={{ height: "600px" }}>
+    <div className="d-flex flex-column" style={{ height: "670px" }}>
       <div className="bg-info py-2">
         <ChatHeader />
       </div>

@@ -50,7 +50,7 @@ const MessageContainer = () => {
           <div className="col-3 p-0 border-right ">
             <ChatContacts contacts={contacts} />
           </div>
-          <div className="col p-0 bg-secondary" style={{ height: "600px" }}>
+          <div className="col p-0 bg-secondary" style={{ height: "670px" }}>
             <Chatts chatDetails={chatDetails} />
           </div>
         </div>
