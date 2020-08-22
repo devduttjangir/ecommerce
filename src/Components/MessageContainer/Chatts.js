@@ -3,7 +3,10 @@ import { useSelector } from "react-redux";
 import ChatHeader from "./ChatHeader";
 import InputMessage from "./InputMessage";
 const Chatts = (props) => {
-  const messages = useSelector((state) => state.messages);
+  const messages = useSelector((state) => {
+    return state.messages.filter((message) => message.recipient === "Lucy");
+  });
+
   const chatComponent = (chatDetail) => {
     return (
       <React.Fragment>

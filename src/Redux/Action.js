@@ -1,4 +1,11 @@
-import { TAG_SELECTED, SHOW_LOGIN_SCREEN ,SHOW_MESSAGES_SCREEN,NEW_MESSAGE_ADDED,SHOW_CONTACT_SCREEN,NEW_CONTACT_ADDED} from "./ActionType";
+import {
+  TAG_SELECTED,
+  SHOW_LOGIN_SCREEN,
+  SHOW_MESSAGES_SCREEN,
+  NEW_MESSAGE_ADDED,
+  SHOW_CONTACT_SCREEN,
+  NEW_CONTACT_ADDED,
+} from "./ActionType";
 
 export const tagSelected = (category) => ({
   type: TAG_SELECTED,
@@ -15,15 +22,17 @@ export const showContactScreen = (shouldShow) => ({
   payload: shouldShow,
 });
 
-export const showMessagesScreen=(shouldShow)=>({
+export const showMessagesScreen = (shouldShow) => ({
   type: SHOW_MESSAGES_SCREEN,
-  payload:shouldShow,
+  payload: shouldShow,
 });
-export const newMessageAdded=(message)=>({
+
+export const newMessageAdded = (message) => ({
   type: NEW_MESSAGE_ADDED,
-  payload:message,
+  payload: message,
 });
-export const newContactAdded=(newcontact)=>({
+
+export const newContactAdded = (newcontact) => ({
   type: NEW_CONTACT_ADDED,
-  payload:newcontact,
+  payload: newcontact,
 });
