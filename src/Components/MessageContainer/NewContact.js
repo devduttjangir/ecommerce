@@ -65,20 +65,19 @@ const NewContact = (props) => {
                       onChange={(event) => setImageURL(event.target.value)}
                     />
                   </div>
-
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    onClick={() => dispatch(showContactScreen(false))}
+                  >
+                    Cancel
+                  </button>
                   <button
                     type="submit"
-                    class="btn btn-primary"
+                    class="btn btn-primary float-right"
                     onClick={(event) => newContactSubmitted(event)}
                   >
                     Submit
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-secondary float-right"
-                    onClick={(event) => dispatch(showContactScreen(false))}
-                  >
-                    Cancel
                   </button>
                 </form>
               </div>
@@ -88,7 +87,6 @@ const NewContact = (props) => {
       </div>
     );
   };
-
 
   const dismissModal = () => {
     dispatch(showContactScreen(false));

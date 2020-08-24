@@ -18,6 +18,7 @@ const InputMessage = (props) => {
         postdate: "8 months ago",
         content: message,
         isFromMe: true,
+        recipient: props.recipient,
       })
     );
     setMessage("");

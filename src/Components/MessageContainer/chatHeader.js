@@ -1,10 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const ChatHeader = (props) => {
-  const chatDetails = {
-    userName: "Lucy",
-    imageurl: "https://milo.bootlab.io/img/avatars/3.png",
-  };
+  const contact = useSelector((state) =>
+    state.contacts.filter((contact) => contact.isSelected)
+  );
+  const chatDetails = contact[0];
   return (
     <div className="container">
       <div className="row">
@@ -17,7 +18,7 @@ const ChatHeader = (props) => {
               className="rounded-circle border border-light"
             />
             <div className="pl-3 font-weight-bold text-light d-flex align-items-center">
-              <span>{chatDetails.userName}</span>
+              <span>{chatDetails.title}</span>
             </div>
           </div>
         </div>

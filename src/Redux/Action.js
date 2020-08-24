@@ -5,6 +5,7 @@ import {
   NEW_MESSAGE_ADDED,
   SHOW_CONTACT_SCREEN,
   NEW_CONTACT_ADDED,
+  CONTACT_SELECTED,
 } from "./ActionType";
 
 export const tagSelected = (category) => ({
@@ -32,7 +33,12 @@ export const newMessageAdded = (message) => ({
   payload: message,
 });
 
-export const newContactAdded = (newcontact) => ({
+export const newContactAdded = (newContact) => ({
   type: NEW_CONTACT_ADDED,
-  payload: newcontact,
+  payload: newContact,
+});
+
+export const contactSelected = (contact) => ({
+  type: CONTACT_SELECTED,
+  payload: contact,
 });

@@ -1,33 +1,32 @@
 import React from "react";
-import { newContactAdded, showContactScreen } from "../../Redux/Action";
+import { contactSelected, showContactScreen } from "../../Redux/Action";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import NewContact from "./NewContact";
 const ChatContacts = () => {
-
   const dispatch = useDispatch();
   const contacts = useSelector((state) => state.contacts);
-  const rowSelected =(contact)=>{
+  const rowSelected = (contact) => {
     console.log(contact);
-  }
+  };
   const handleNewContact = () => {
-    //  dispatch(newContactAdded({
-    //   title: "Lucy",
-    //   imageurl: "https://milo.bootlab.io/img/avatars/3.png"
-    //  }))
     dispatch(showContactScreen(true));
   };
   const rendercontacts = () => {
     return contacts.map((contact) => {
       return (
-        <li className={`list-group-item ${
-                          contact.isSelected ? "bg-success" : ""
-                        }`}>
+        <li
+          className={`list-group-item ${
+            contact.isSelected ? "bg-success" : ""
+          }`}
+          onClick={() => dispatch(contactSelected(contact))}
+        >
           <div className="container">
-            <div className="row" onClick={()=>rowSelected(contact)}>
+            <div className="row" onClick={() => rowSelected(contact)}>
               <div className="col-2">
                 <img
                   src={contact.imageurl}
+                  alt=""
                   className="rounded-circle border border-info"
                   height="50px"
                   width="50px"

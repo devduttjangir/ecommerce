@@ -5,6 +5,7 @@ import {
   SHOW_MESSAGES_SCREEN,
   NEW_MESSAGE_ADDED,
   NEW_CONTACT_ADDED,
+  CONTACT_SELECTED,
 } from "./ActionType";
 const initialState = {
   selectedCategory: "Entertainment",
@@ -34,14 +35,14 @@ const initialState = {
       title: "Lucy",
       imageurl: "https://milo.bootlab.io/img/avatars/3.png",
       postdate: "8 months ago",
-      isSelected:false,
+      isSelected: false,
     },
     {
       title: "David",
       imageurl:
         "https://icons-for-free.com/iconfiles/png/512/boy+man+person+user+woman+icon-1320085967769585303.png",
       postdate: "8 months ago",
-      isSelected:true,
+      isSelected: true,
     },
   ],
   selectedContact: {},
@@ -66,6 +67,19 @@ const reducer = (state = initialState, action) => {
     }
     case NEW_CONTACT_ADDED: {
       return { ...state, contacts: [...state.contacts, action.payload] };
+    }
+    case CONTACT_SELECTED: {
+      let title = action.payload.title;
+      return {
+        ...state,
+        contacts: state.contacts.map((contact) => {
+          contact.isSelected = false;
+          if (contact.title === title) {
+            contact.isSelected = true;
+          }
+          return contact;
+        }),
+      };
     }
     default:
       return state;

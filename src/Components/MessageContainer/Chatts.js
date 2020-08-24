@@ -3,10 +3,15 @@ import { useSelector } from "react-redux";
 import ChatHeader from "./ChatHeader";
 import InputMessage from "./InputMessage";
 const Chatts = (props) => {
+  const contact = useSelector((state) =>
+    state.contacts.filter((contact) => contact.isSelected)
+  );
+  const selectedContact = contact[0];
   const messages = useSelector((state) => {
-    return state.messages.filter((message) => message.recipient === "Lucy");
+    return state.messages.filter(
+      (message) => message.recipient === selectedContact.title
+    );
   });
-
   const chatComponent = (chatDetail) => {
     return (
       <React.Fragment>
@@ -56,7 +61,7 @@ const Chatts = (props) => {
       </div>
       <div className="overflow-auto">{renderChats()}</div>
       <div className="mt-auto">
-        <InputMessage />
+        <InputMessage recipient={selectedContact.title} />
       </div>
     </div>
   );
