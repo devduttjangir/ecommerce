@@ -34,12 +34,14 @@ const initialState = {
       title: "Lucy",
       imageurl: "https://milo.bootlab.io/img/avatars/3.png",
       postdate: "8 months ago",
+      isSelected:false,
     },
     {
       title: "David",
       imageurl:
         "https://icons-for-free.com/iconfiles/png/512/boy+man+person+user+woman+icon-1320085967769585303.png",
       postdate: "8 months ago",
+      isSelected:true,
     },
   ],
   selectedContact: {},

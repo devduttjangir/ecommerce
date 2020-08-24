@@ -4,8 +4,12 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import NewContact from "./NewContact";
 const ChatContacts = () => {
+
   const dispatch = useDispatch();
   const contacts = useSelector((state) => state.contacts);
+  const rowSelected =(contact)=>{
+    console.log(contact);
+  }
   const handleNewContact = () => {
     //  dispatch(newContactAdded({
     //   title: "Lucy",
@@ -16,9 +20,11 @@ const ChatContacts = () => {
   const rendercontacts = () => {
     return contacts.map((contact) => {
       return (
-        <li class="list-group-item">
+        <li className={`list-group-item ${
+                          contact.isSelected ? "bg-success" : ""
+                        }`}>
           <div className="container">
-            <div className="row">
+            <div className="row" onClick={()=>rowSelected(contact)}>
               <div className="col-2">
                 <img
                   src={contact.imageurl}
@@ -58,7 +64,7 @@ const ChatContacts = () => {
         </div>
       </div>
       <div className="row overflow-auto" style={{ height: "600px" }}>
-        <div className="col">
+        <div className="col p-0">
           <ul class="list-group list-group-flush overflow-auto">
             {rendercontacts()}
           </ul>

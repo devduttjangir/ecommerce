@@ -73,6 +73,13 @@ const NewContact = (props) => {
                   >
                     Submit
                   </button>
+                  <button
+                    type="button"
+                    class="btn btn-secondary float-right"
+                    onClick={(event) => dispatch(showContactScreen(false))}
+                  >
+                    Cancel
+                  </button>
                 </form>
               </div>
             </div>
@@ -81,6 +88,7 @@ const NewContact = (props) => {
       </div>
     );
   };
+
 
   const dismissModal = () => {
     dispatch(showContactScreen(false));
